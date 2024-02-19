@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	padding: 1rem 2rem;
+	height: 100dvh;
+}
+
+h1 {
+	text-align: center;
+	margin-block: 1rem;
+}
+
+#steps {
+	position: absolute;
+	left: 7%;
+	list-style-type: disclosure-closed;
+}
+#steps li {
+	margin-block: 0.5rem;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#steps li:hover {
+	color: orange;
+}
+
+.gamearea {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4rem;
+
+	#grid {
+		border: 20px solid #333;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+		padding: 2rem;
+
+		.griditem {
+			width: 148px;
+			height: 148px;
+			border: 1px solid #333;
+			border-radius: 8px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 6rem;
+			font-weight: 300;
+
+			cursor: pointer;
+		}
+
+		.griditem:hover {
+			background-color: #eee;
+		}
+	}
+}
+
+.gameinfo {
+	margin-top: 2rem;
+	p {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+}
+
+::backdrop {
+	background-color: rgb(0, 0, 0, 0.65);
+	height: 100%;
+}
+dialog {
+	width: 400px;
+	height: 180px;
+	outline: none;
+	border: none;
+	margin: auto;
+	padding: 2rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 100px;
+	height: 36px;
+	margin-block: 1rem;
+}
+
+.btn-primary {
+	background-color: #6c5ce7;
+	color: white;
+}
+
+.btn-outline {
+	background-color: transparent;
+	border: 1px solid #333;
+}
+
+.button-group {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+#timer {
+	position: fixed;
+	right: 1%;
+	top: 1%;
+	font-size: 2rem;
+	font-family: "Times New Roman", Times, serif;
+}
